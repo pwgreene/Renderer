@@ -1,0 +1,2 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libSTATIC.a  CMakeFiles/STATIC.dir/kdTree.cpp.o CMakeFiles/STATIC.dir/main.cpp.o CMakeFiles/STATIC.dir/stb.cpp.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libSTATIC.a

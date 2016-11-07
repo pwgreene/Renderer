@@ -1,0 +1,2 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libvecmath2.a  CMakeFiles/vecmath2.dir/Matrix2f.cpp.o CMakeFiles/vecmath2.dir/Matrix3f.cpp.o CMakeFiles/vecmath2.dir/Matrix4f.cpp.o CMakeFiles/vecmath2.dir/Quat4f.cpp.o CMakeFiles/vecmath2.dir/Vector2f.cpp.o CMakeFiles/vecmath2.dir/Vector3f.cpp.o CMakeFiles/vecmath2.dir/Vector4f.cpp.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libvecmath2.a

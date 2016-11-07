@@ -1,0 +1,106 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../sway/include/sway/bounded_priority_queue.hpp
+minmaxheap.hpp
+-
+functional
+-
+vector
+-
+
+../sway/include/sway/detail/minmaxheap.hpp
+algorithm
+-
+ilog2.hpp
+-
+
+../sway/include/sway/ilog2.hpp
+
+../sway/include/sway/minmaxheap.hpp
+algorithm
+-
+iterator
+-
+detail/minmaxheap.hpp
+-
+ilog2.hpp
+-
+
+../vecmath/include/Vector3f.h
+
+/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/kdTree.cpp
+kdTree.h
+/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/kdTree.h
+iostream
+-
+iomanip
+-
+
+/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/kdTree.h
+Vector3f.h
+/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/Vector3f.h
+vector
+/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/vector
+bounded_priority_queue.hpp
+/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/bounded_priority_queue.hpp
+
+/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/main.cpp
+kdTree.h
+/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/kdTree.h
+math.h
+-
+
+/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/stb.cpp
+stb_image.h
+/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/stb_image.h
+stb_image_write.h
+/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/stb_image_write.h
+
+/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/stb_image.h
+stb_image.h
+/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/stb_image.h
+stdio.h
+-
+stdarg.h
+-
+stddef.h
+-
+stdlib.h
+-
+string.h
+-
+math.h
+-
+stdio.h
+-
+assert.h
+-
+stdint.h
+-
+emmintrin.h
+-
+intrin.h
+-
+arm_neon.h
+-
+
+/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/stb_image_write.h
+stdio.h
+-
+stdarg.h
+-
+stdlib.h
+-
+string.h
+-
+math.h
+-
+assert.h
+-
+

@@ -1,0 +1,2 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libKNN.a  CMakeFiles/KNN.dir/kdTree.cpp.o CMakeFiles/KNN.dir/main.cpp.o CMakeFiles/KNN.dir/stb.cpp.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libKNN.a
