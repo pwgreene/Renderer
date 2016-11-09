@@ -142,7 +142,7 @@ kdTree: CMakeFiles/kdTree.dir/kdTree.cpp.o
 kdTree: CMakeFiles/kdTree.dir/main.cpp.o
 kdTree: CMakeFiles/kdTree.dir/stb.cpp.o
 kdTree: CMakeFiles/kdTree.dir/build.make
-kdTree: vecmath/libvecmath.a
+kdTree: vecmath/libvecmath2.a
 kdTree: CMakeFiles/kdTree.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable kdTree"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/kdTree.dir/link.txt --verbose=$(VERBOSE)

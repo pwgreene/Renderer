@@ -120,6 +120,11 @@ CMakeFiles/renderer.dir/src/Octree.cpp.o
  /Users/Parker/Documents/MIT/Junior Fall/6.837/project/src/Octree.h
  /Users/Parker/Documents/MIT/Junior Fall/6.837/project/src/Ray.h
 CMakeFiles/renderer.dir/src/Renderer.cpp.o
+ ../include/KNN/kdTree.h
+ ../include/KNN/sway/include/sway/bounded_priority_queue.hpp
+ ../include/KNN/sway/include/sway/detail/minmaxheap.hpp
+ ../include/KNN/sway/include/sway/ilog2.hpp
+ ../include/KNN/sway/include/sway/minmaxheap.hpp
  ../include/vecmath/include/Matrix2f.h
  ../include/vecmath/include/Matrix3f.h
  ../include/vecmath/include/Matrix4f.h
@@ -176,6 +181,11 @@ CMakeFiles/renderer.dir/src/VecUtils.cpp.o
  /Users/Parker/Documents/MIT/Junior Fall/6.837/project/src/VecUtils.cpp
  /Users/Parker/Documents/MIT/Junior Fall/6.837/project/src/VecUtils.h
 CMakeFiles/renderer.dir/src/main.cpp.o
+ ../include/KNN/kdTree.h
+ ../include/KNN/sway/include/sway/bounded_priority_queue.hpp
+ ../include/KNN/sway/include/sway/detail/minmaxheap.hpp
+ ../include/KNN/sway/include/sway/ilog2.hpp
+ ../include/KNN/sway/include/sway/minmaxheap.hpp
  ../include/vecmath/include/Matrix2f.h
  ../include/vecmath/include/Matrix3f.h
  ../include/vecmath/include/Matrix4f.h

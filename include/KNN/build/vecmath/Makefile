@@ -111,19 +111,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-vecmath/CMakeFiles/vecmath.dir/rule:
-	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f CMakeFiles/Makefile2 vecmath/CMakeFiles/vecmath.dir/rule
-.PHONY : vecmath/CMakeFiles/vecmath.dir/rule
+vecmath/CMakeFiles/vecmath2.dir/rule:
+	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f CMakeFiles/Makefile2 vecmath/CMakeFiles/vecmath2.dir/rule
+.PHONY : vecmath/CMakeFiles/vecmath2.dir/rule
 
 # Convenience name for target.
-vecmath: vecmath/CMakeFiles/vecmath.dir/rule
+vecmath2: vecmath/CMakeFiles/vecmath2.dir/rule
 
-.PHONY : vecmath
+.PHONY : vecmath2
 
 # fast build rule for target.
-vecmath/fast:
-	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath.dir/build.make vecmath/CMakeFiles/vecmath.dir/build
-.PHONY : vecmath/fast
+vecmath2/fast:
+	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath2.dir/build.make vecmath/CMakeFiles/vecmath2.dir/build
+.PHONY : vecmath2/fast
 
 Matrix2f.o: Matrix2f.cpp.o
 
@@ -131,7 +131,7 @@ Matrix2f.o: Matrix2f.cpp.o
 
 # target to build an object file
 Matrix2f.cpp.o:
-	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath.dir/build.make vecmath/CMakeFiles/vecmath.dir/Matrix2f.cpp.o
+	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath2.dir/build.make vecmath/CMakeFiles/vecmath2.dir/Matrix2f.cpp.o
 .PHONY : Matrix2f.cpp.o
 
 Matrix2f.i: Matrix2f.cpp.i
@@ -140,7 +140,7 @@ Matrix2f.i: Matrix2f.cpp.i
 
 # target to preprocess a source file
 Matrix2f.cpp.i:
-	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath.dir/build.make vecmath/CMakeFiles/vecmath.dir/Matrix2f.cpp.i
+	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath2.dir/build.make vecmath/CMakeFiles/vecmath2.dir/Matrix2f.cpp.i
 .PHONY : Matrix2f.cpp.i
 
 Matrix2f.s: Matrix2f.cpp.s
@@ -149,7 +149,7 @@ Matrix2f.s: Matrix2f.cpp.s
 
 # target to generate assembly for a file
 Matrix2f.cpp.s:
-	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath.dir/build.make vecmath/CMakeFiles/vecmath.dir/Matrix2f.cpp.s
+	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath2.dir/build.make vecmath/CMakeFiles/vecmath2.dir/Matrix2f.cpp.s
 .PHONY : Matrix2f.cpp.s
 
 Matrix3f.o: Matrix3f.cpp.o
@@ -158,7 +158,7 @@ Matrix3f.o: Matrix3f.cpp.o
 
 # target to build an object file
 Matrix3f.cpp.o:
-	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath.dir/build.make vecmath/CMakeFiles/vecmath.dir/Matrix3f.cpp.o
+	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath2.dir/build.make vecmath/CMakeFiles/vecmath2.dir/Matrix3f.cpp.o
 .PHONY : Matrix3f.cpp.o
 
 Matrix3f.i: Matrix3f.cpp.i
@@ -167,7 +167,7 @@ Matrix3f.i: Matrix3f.cpp.i
 
 # target to preprocess a source file
 Matrix3f.cpp.i:
-	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath.dir/build.make vecmath/CMakeFiles/vecmath.dir/Matrix3f.cpp.i
+	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath2.dir/build.make vecmath/CMakeFiles/vecmath2.dir/Matrix3f.cpp.i
 .PHONY : Matrix3f.cpp.i
 
 Matrix3f.s: Matrix3f.cpp.s
@@ -176,7 +176,7 @@ Matrix3f.s: Matrix3f.cpp.s
 
 # target to generate assembly for a file
 Matrix3f.cpp.s:
-	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath.dir/build.make vecmath/CMakeFiles/vecmath.dir/Matrix3f.cpp.s
+	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath2.dir/build.make vecmath/CMakeFiles/vecmath2.dir/Matrix3f.cpp.s
 .PHONY : Matrix3f.cpp.s
 
 Matrix4f.o: Matrix4f.cpp.o
@@ -185,7 +185,7 @@ Matrix4f.o: Matrix4f.cpp.o
 
 # target to build an object file
 Matrix4f.cpp.o:
-	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath.dir/build.make vecmath/CMakeFiles/vecmath.dir/Matrix4f.cpp.o
+	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath2.dir/build.make vecmath/CMakeFiles/vecmath2.dir/Matrix4f.cpp.o
 .PHONY : Matrix4f.cpp.o
 
 Matrix4f.i: Matrix4f.cpp.i
@@ -194,7 +194,7 @@ Matrix4f.i: Matrix4f.cpp.i
 
 # target to preprocess a source file
 Matrix4f.cpp.i:
-	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath.dir/build.make vecmath/CMakeFiles/vecmath.dir/Matrix4f.cpp.i
+	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath2.dir/build.make vecmath/CMakeFiles/vecmath2.dir/Matrix4f.cpp.i
 .PHONY : Matrix4f.cpp.i
 
 Matrix4f.s: Matrix4f.cpp.s
@@ -203,7 +203,7 @@ Matrix4f.s: Matrix4f.cpp.s
 
 # target to generate assembly for a file
 Matrix4f.cpp.s:
-	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath.dir/build.make vecmath/CMakeFiles/vecmath.dir/Matrix4f.cpp.s
+	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath2.dir/build.make vecmath/CMakeFiles/vecmath2.dir/Matrix4f.cpp.s
 .PHONY : Matrix4f.cpp.s
 
 Quat4f.o: Quat4f.cpp.o
@@ -212,7 +212,7 @@ Quat4f.o: Quat4f.cpp.o
 
 # target to build an object file
 Quat4f.cpp.o:
-	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath.dir/build.make vecmath/CMakeFiles/vecmath.dir/Quat4f.cpp.o
+	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath2.dir/build.make vecmath/CMakeFiles/vecmath2.dir/Quat4f.cpp.o
 .PHONY : Quat4f.cpp.o
 
 Quat4f.i: Quat4f.cpp.i
@@ -221,7 +221,7 @@ Quat4f.i: Quat4f.cpp.i
 
 # target to preprocess a source file
 Quat4f.cpp.i:
-	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath.dir/build.make vecmath/CMakeFiles/vecmath.dir/Quat4f.cpp.i
+	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath2.dir/build.make vecmath/CMakeFiles/vecmath2.dir/Quat4f.cpp.i
 .PHONY : Quat4f.cpp.i
 
 Quat4f.s: Quat4f.cpp.s
@@ -230,7 +230,7 @@ Quat4f.s: Quat4f.cpp.s
 
 # target to generate assembly for a file
 Quat4f.cpp.s:
-	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath.dir/build.make vecmath/CMakeFiles/vecmath.dir/Quat4f.cpp.s
+	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath2.dir/build.make vecmath/CMakeFiles/vecmath2.dir/Quat4f.cpp.s
 .PHONY : Quat4f.cpp.s
 
 Vector2f.o: Vector2f.cpp.o
@@ -239,7 +239,7 @@ Vector2f.o: Vector2f.cpp.o
 
 # target to build an object file
 Vector2f.cpp.o:
-	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath.dir/build.make vecmath/CMakeFiles/vecmath.dir/Vector2f.cpp.o
+	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath2.dir/build.make vecmath/CMakeFiles/vecmath2.dir/Vector2f.cpp.o
 .PHONY : Vector2f.cpp.o
 
 Vector2f.i: Vector2f.cpp.i
@@ -248,7 +248,7 @@ Vector2f.i: Vector2f.cpp.i
 
 # target to preprocess a source file
 Vector2f.cpp.i:
-	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath.dir/build.make vecmath/CMakeFiles/vecmath.dir/Vector2f.cpp.i
+	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath2.dir/build.make vecmath/CMakeFiles/vecmath2.dir/Vector2f.cpp.i
 .PHONY : Vector2f.cpp.i
 
 Vector2f.s: Vector2f.cpp.s
@@ -257,7 +257,7 @@ Vector2f.s: Vector2f.cpp.s
 
 # target to generate assembly for a file
 Vector2f.cpp.s:
-	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath.dir/build.make vecmath/CMakeFiles/vecmath.dir/Vector2f.cpp.s
+	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath2.dir/build.make vecmath/CMakeFiles/vecmath2.dir/Vector2f.cpp.s
 .PHONY : Vector2f.cpp.s
 
 Vector3f.o: Vector3f.cpp.o
@@ -266,7 +266,7 @@ Vector3f.o: Vector3f.cpp.o
 
 # target to build an object file
 Vector3f.cpp.o:
-	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath.dir/build.make vecmath/CMakeFiles/vecmath.dir/Vector3f.cpp.o
+	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath2.dir/build.make vecmath/CMakeFiles/vecmath2.dir/Vector3f.cpp.o
 .PHONY : Vector3f.cpp.o
 
 Vector3f.i: Vector3f.cpp.i
@@ -275,7 +275,7 @@ Vector3f.i: Vector3f.cpp.i
 
 # target to preprocess a source file
 Vector3f.cpp.i:
-	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath.dir/build.make vecmath/CMakeFiles/vecmath.dir/Vector3f.cpp.i
+	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath2.dir/build.make vecmath/CMakeFiles/vecmath2.dir/Vector3f.cpp.i
 .PHONY : Vector3f.cpp.i
 
 Vector3f.s: Vector3f.cpp.s
@@ -284,7 +284,7 @@ Vector3f.s: Vector3f.cpp.s
 
 # target to generate assembly for a file
 Vector3f.cpp.s:
-	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath.dir/build.make vecmath/CMakeFiles/vecmath.dir/Vector3f.cpp.s
+	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath2.dir/build.make vecmath/CMakeFiles/vecmath2.dir/Vector3f.cpp.s
 .PHONY : Vector3f.cpp.s
 
 Vector4f.o: Vector4f.cpp.o
@@ -293,7 +293,7 @@ Vector4f.o: Vector4f.cpp.o
 
 # target to build an object file
 Vector4f.cpp.o:
-	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath.dir/build.make vecmath/CMakeFiles/vecmath.dir/Vector4f.cpp.o
+	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath2.dir/build.make vecmath/CMakeFiles/vecmath2.dir/Vector4f.cpp.o
 .PHONY : Vector4f.cpp.o
 
 Vector4f.i: Vector4f.cpp.i
@@ -302,7 +302,7 @@ Vector4f.i: Vector4f.cpp.i
 
 # target to preprocess a source file
 Vector4f.cpp.i:
-	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath.dir/build.make vecmath/CMakeFiles/vecmath.dir/Vector4f.cpp.i
+	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath2.dir/build.make vecmath/CMakeFiles/vecmath2.dir/Vector4f.cpp.i
 .PHONY : Vector4f.cpp.i
 
 Vector4f.s: Vector4f.cpp.s
@@ -311,7 +311,7 @@ Vector4f.s: Vector4f.cpp.s
 
 # target to generate assembly for a file
 Vector4f.cpp.s:
-	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath.dir/build.make vecmath/CMakeFiles/vecmath.dir/Vector4f.cpp.s
+	cd "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build" && $(MAKE) -f vecmath/CMakeFiles/vecmath2.dir/build.make vecmath/CMakeFiles/vecmath2.dir/Vector4f.cpp.s
 .PHONY : Vector4f.cpp.s
 
 # Help Target
@@ -322,7 +322,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... vecmath"
+	@echo "... vecmath2"
 	@echo "... Matrix2f.o"
 	@echo "... Matrix2f.i"
 	@echo "... Matrix2f.s"

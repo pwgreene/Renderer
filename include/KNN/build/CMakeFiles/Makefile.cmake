@@ -49,5 +49,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/kdTree.dir/DependInfo.cmake"
   "CMakeFiles/KNN.dir/DependInfo.cmake"
-  "vecmath/CMakeFiles/vecmath.dir/DependInfo.cmake"
+  "vecmath/CMakeFiles/vecmath2.dir/DependInfo.cmake"
   )

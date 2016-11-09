@@ -23,6 +23,8 @@ add_subdirectory(include/vecmath)
 include_directories(include/KNN)
 add_subdirectory(include/KNN)
 
+include_directories(include/KNN/sway/include/sway)
+
 set (SRC_DIR "src/")
 
 set(CPP_FILES

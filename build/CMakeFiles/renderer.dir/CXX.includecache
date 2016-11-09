@@ -6,6 +6,40 @@
 
 #IncludeRegexTransform: 
 
+../include/KNN/kdTree.h
+Vector3f.h
+../include/KNN/Vector3f.h
+vector
+../include/KNN/vector
+bounded_priority_queue.hpp
+../include/KNN/bounded_priority_queue.hpp
+
+../include/KNN/sway/include/sway/bounded_priority_queue.hpp
+minmaxheap.hpp
+-
+functional
+-
+vector
+-
+
+../include/KNN/sway/include/sway/detail/minmaxheap.hpp
+algorithm
+-
+ilog2.hpp
+-
+
+../include/KNN/sway/include/sway/ilog2.hpp
+
+../include/KNN/sway/include/sway/minmaxheap.hpp
+algorithm
+-
+iterator
+-
+detail/minmaxheap.hpp
+-
+ilog2.hpp
+-
+
 ../include/vecmath/include/Matrix2f.h
 cstdio
 -
@@ -130,6 +164,8 @@ vecmath.h
 Light.h
 /Users/Parker/Documents/MIT/Junior Fall/6.837/project/src/Light.h
 math.h
+-
+random
 -
 
 /Users/Parker/Documents/MIT/Junior Fall/6.837/project/src/Light.h
@@ -259,6 +295,8 @@ SceneParser.h
 /Users/Parker/Documents/MIT/Junior Fall/6.837/project/src/SceneParser.h
 ArgParser.h
 /Users/Parker/Documents/MIT/Junior Fall/6.837/project/src/ArgParser.h
+kdTree.h
+/Users/Parker/Documents/MIT/Junior Fall/6.837/project/src/kdTree.h
 random
 -
 

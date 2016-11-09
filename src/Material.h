@@ -52,6 +52,53 @@ protected:
     float    _refractionIndex; //a refractionIndex of 0 indicates no transparency (for this implementation)
 };
 
+class PhotonMaterial
+{
+public:
+    PhotonMaterial(Vector3f color,
+                   float pReflectionDiffuse,
+                   float pReflectionSpecular,
+                   float pRefraction,
+                   float pAbsorption,
+                   float refractionIndex) :
+    _color(color),
+    _pReflectionDiffuse(pReflectionDiffuse),
+    _pReflectionSpecular(pReflectionSpecular),
+    _pRefraction(pRefraction),
+    _pAbsorption(pAbsorption),
+    _refractionIndex(refractionIndex)
+    {
+    }
+    
+    Vector3f getColor() {
+        return _color;
+    }
+    
+    float getPReflectionDiffuse() {
+        return _pReflectionDiffuse;
+    }
+    float getPReflectionSpecular() {
+        return _pReflectionSpecular;
+    }
+    float getPRefraction() {
+        return _pRefraction;
+    }
+    float getPAbsorption() {
+        return _pAbsorption;
+    }
+    float getRefractionIndex() {
+        return _refractionIndex;
+    }
+    
+private:
+    Vector3f _color;
+    float _pReflectionDiffuse;
+    float _pReflectionSpecular;
+    float _pRefraction;
+    float _pAbsorption;
+    float _refractionIndex;
+};
+
 
 
 #endif // MATERIAL_H

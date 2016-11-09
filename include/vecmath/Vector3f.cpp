@@ -1,6 +1,7 @@
 #include <cmath>
 #include <cstdio>
 #include <cstdlib>
+#include <random>
 
 #include "Vector3f.h"
 #include "Vector2f.h"
@@ -277,6 +278,35 @@ Vector3f Vector3f::cubicInterpolate( const Vector3f& p0, const Vector3f& p1, con
 
 	// top level
 	return Vector3f::lerp( p0p1_p1p2, p1p2_p2p3, t );
+}
+
+Vector3f Vector3f::CosWeightedRandomHemisphereDirection( const Vector3f n )
+{
+    float Xi1 = (float)rand()/(float)RAND_MAX;
+    float Xi2 = (float)rand()/(float)RAND_MAX;
+    
+    float  theta = acos(sqrt(1.0-Xi1));
+    float  phi = 2.0 * 3.141592654 * Xi2;
+    
+    float xs = sin(theta) * cos(phi);
+    float ys = cos(theta);
+    float zs = sin(theta) * sin(phi);
+    
+    Vector3f y(n.x(), n.y(), n.z());
+    Vector3f h = y;
+    if (fabs(h.x())<=fabs(h.y()) && fabs(h.x())<=fabs(h.z()))
+        h[0]= 1.0;
+    else if (fabs(h.y())<=fabs(h.x()) && fabs(h.y())<=fabs(h.z()))
+        h[1]= 1.0;
+    else
+        h[2]= 1.0;
+    
+    
+    Vector3f x = (cross(h,y)).normalized();
+    Vector3f z = (cross(x,y)).normalized();
+    
+    Vector3f direction = xs * x + ys * y + zs * z;
+    return direction.normalized();
 }
 
 Vector3f operator + ( const Vector3f& v0, const Vector3f& v1 )

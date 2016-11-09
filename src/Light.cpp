@@ -1,6 +1,7 @@
 #include "Light.h"
 
 #include <math.h>
+#include <random>
 
 
 void DirectionalLight::getIllumination(const Vector3f &p,
@@ -54,9 +55,6 @@ void SpotLight::getIllumination(const Vector3f &p,
     } else {
         angleDiff = 0;
     }
-//    float cosDiff = cosangle - cos(_hotspotAngle);
-//    float angleDiff = cosDiff < 0 ? std::pow((1-cosDiff),5) : 1.0;
-//    distToLight = lightToPoint.abs();
     intensity = _color * angleDiff;
 }
 
@@ -70,4 +68,24 @@ void LuminousMaterial::getIllumination(const Vector3f &p,
     tolight = lightToPoint.normalized();
     distToLight = lightToPoint.abs();
     intensity = _color / (_falloff*distToLight);
+}
+
+void QuadLight::getIllumination(const Vector3f &p,
+                                       Vector3f &tolight,
+                                       Vector3f &intensity,
+                                       float &distToLight) const
+{
+    // tolight, intensity, distToLight are outputs
+    Vector3f lightToPoint = points[0] - p;
+    tolight = lightToPoint.normalized();
+    distToLight = lightToPoint.abs();
+    intensity = _color / (distToLight*distToLight);
+}
+
+Vector3f QuadLight::getRandomPosition() {
+    Vector4f randomWeights((float)rand(), (float)rand(), (float)rand(), (float)rand());
+    randomWeights = randomWeights / (randomWeights[0] + randomWeights[1] + randomWeights[2] + randomWeights[3]);
+    return Vector3f(points[0].x()*randomWeights[0] + points[1].x()*randomWeights[1] + points[2].x()*randomWeights[2] + points[3].x()*randomWeights[3],
+                    points[0].y()*randomWeights[0] + points[1].y()*randomWeights[1] + points[2].y()*randomWeights[2] + points[3].y()*randomWeights[3],
+                    points[0].z()*randomWeights[0] + points[1].z()*randomWeights[1] + points[2].z()*randomWeights[2] + points[3].z()*randomWeights[3]);
 }

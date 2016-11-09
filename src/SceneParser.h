@@ -69,6 +69,7 @@ class SceneParser
     Light * parseDirectionalLight();
     Light * parsePointLight();
     Light * parseSpotLight();
+    Light * parseQuadLight();
     void parseMaterials();
     Material * parseMaterial();
     LuminousMaterial * parseLuminousMaterial();

@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/includ
 # Target rules for target CMakeFiles/kdTree.dir
 
 # All Build rule for target.
-CMakeFiles/kdTree.dir/all: vecmath/CMakeFiles/vecmath.dir/all
+CMakeFiles/kdTree.dir/all: vecmath/CMakeFiles/vecmath2.dir/all
 	$(MAKE) -f CMakeFiles/kdTree.dir/build.make CMakeFiles/kdTree.dir/depend
 	$(MAKE) -f CMakeFiles/kdTree.dir/build.make CMakeFiles/kdTree.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build/CMakeFiles" --progress-num=5,6,7,8 "Built target kdTree"
@@ -137,12 +137,12 @@ clean: CMakeFiles/KNN.dir/clean
 # Directory level rules for directory vecmath
 
 # Convenience name for "all" pass in the directory.
-vecmath/all: vecmath/CMakeFiles/vecmath.dir/all
+vecmath/all: vecmath/CMakeFiles/vecmath2.dir/all
 
 .PHONY : vecmath/all
 
 # Convenience name for "clean" pass in the directory.
-vecmath/clean: vecmath/CMakeFiles/vecmath.dir/clean
+vecmath/clean: vecmath/CMakeFiles/vecmath2.dir/clean
 
 .PHONY : vecmath/clean
 
@@ -152,39 +152,39 @@ vecmath/preinstall:
 .PHONY : vecmath/preinstall
 
 #=============================================================================
-# Target rules for target vecmath/CMakeFiles/vecmath.dir
+# Target rules for target vecmath/CMakeFiles/vecmath2.dir
 
 # All Build rule for target.
-vecmath/CMakeFiles/vecmath.dir/all:
-	$(MAKE) -f vecmath/CMakeFiles/vecmath.dir/build.make vecmath/CMakeFiles/vecmath.dir/depend
-	$(MAKE) -f vecmath/CMakeFiles/vecmath.dir/build.make vecmath/CMakeFiles/vecmath.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build/CMakeFiles" --progress-num=9,10,11,12,13,14,15,16 "Built target vecmath"
-.PHONY : vecmath/CMakeFiles/vecmath.dir/all
+vecmath/CMakeFiles/vecmath2.dir/all:
+	$(MAKE) -f vecmath/CMakeFiles/vecmath2.dir/build.make vecmath/CMakeFiles/vecmath2.dir/depend
+	$(MAKE) -f vecmath/CMakeFiles/vecmath2.dir/build.make vecmath/CMakeFiles/vecmath2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build/CMakeFiles" --progress-num=9,10,11,12,13,14,15,16 "Built target vecmath2"
+.PHONY : vecmath/CMakeFiles/vecmath2.dir/all
 
 # Include target in all.
-all: vecmath/CMakeFiles/vecmath.dir/all
+all: vecmath/CMakeFiles/vecmath2.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-vecmath/CMakeFiles/vecmath.dir/rule: cmake_check_build_system
+vecmath/CMakeFiles/vecmath2.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build/CMakeFiles" 8
-	$(MAKE) -f CMakeFiles/Makefile2 vecmath/CMakeFiles/vecmath.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 vecmath/CMakeFiles/vecmath2.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/build/CMakeFiles" 0
-.PHONY : vecmath/CMakeFiles/vecmath.dir/rule
+.PHONY : vecmath/CMakeFiles/vecmath2.dir/rule
 
 # Convenience name for target.
-vecmath: vecmath/CMakeFiles/vecmath.dir/rule
+vecmath2: vecmath/CMakeFiles/vecmath2.dir/rule
 
-.PHONY : vecmath
-
-# clean rule for target.
-vecmath/CMakeFiles/vecmath.dir/clean:
-	$(MAKE) -f vecmath/CMakeFiles/vecmath.dir/build.make vecmath/CMakeFiles/vecmath.dir/clean
-.PHONY : vecmath/CMakeFiles/vecmath.dir/clean
+.PHONY : vecmath2
 
 # clean rule for target.
-clean: vecmath/CMakeFiles/vecmath.dir/clean
+vecmath/CMakeFiles/vecmath2.dir/clean:
+	$(MAKE) -f vecmath/CMakeFiles/vecmath2.dir/build.make vecmath/CMakeFiles/vecmath2.dir/clean
+.PHONY : vecmath/CMakeFiles/vecmath2.dir/clean
+
+# clean rule for target.
+clean: vecmath/CMakeFiles/vecmath2.dir/clean
 
 .PHONY : clean
 

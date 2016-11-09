@@ -6,5 +6,5 @@ CXX_FLAGS =  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacO
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/vecmath/include" -I"/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN" 
+CXX_INCLUDES = -I"/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/vecmath/include" -I"/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN" -I"/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/sway/include/sway" 
 

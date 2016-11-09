@@ -20,6 +20,7 @@ main(int argc, const char *argv[])
             << "\t[-normals <normals_image.png>]\n"
             << "\t[-bounces <max_bounces>\n]"
             << "\t[-shadows\n]"
+            << "\t[-photonmapping\n]"
             << "\n"
             ;
         return 1;

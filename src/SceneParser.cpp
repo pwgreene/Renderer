@@ -201,6 +201,8 @@ SceneParser::parseLights()
             lights.push_back(parsePointLight());
         } else if (strcmp(token, "SpotLight")==0) {
             lights.push_back(parseSpotLight());
+        } else if (strcmp(token, "QuadLight")==0) {
+            lights.push_back(parseQuadLight());
         }
         else {
             printf ("Unknown token in parseLight: '%s'\n", token); 
@@ -279,6 +281,35 @@ SceneParser::parseSpotLight()
         }
     }
     return new SpotLight(position, direction, color, hotspotAngle, falloff, falloffDegree);
+}
+
+Light *
+SceneParser::parseQuadLight()
+{
+    char token[MAX_PARSER_TOKEN_LENGTH];
+    Vector3f A, B, C, D, normal, color;
+    getToken(token); assert(!strcmp(token, "{"));
+    while (true) {
+        getToken(token);
+        if (!strcmp(token, "A")) {
+            A = readVector3f();
+        } else if (!strcmp(token, "B")) {
+            B = readVector3f();
+        } else if (!strcmp(token, "C")) {
+            C = readVector3f();
+        } else if (!strcmp(token, "D")) {
+            D = readVector3f();
+        } else if (!strcmp(token, "normal")) {
+            normal = readVector3f();
+        } else if (!strcmp(token, "color")) {
+            color = readVector3f();
+        }
+        else {
+            assert(!strcmp(token, "}"));
+            break;
+        }
+    }
+    return new QuadLight(A, B, C, D, normal, color);
 }
 
 // ====================================================================

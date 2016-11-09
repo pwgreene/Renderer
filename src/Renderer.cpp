@@ -16,6 +16,8 @@ Renderer::Renderer(const ArgParser &args) :
 {
     gen = std::mt19937(rd());
     dis = std::uniform_int_distribution<>(-100, 100);
+    struct Photon root;
+    photonMap = new kdTree3D(root, 0, true);
 
 }
 
@@ -39,7 +41,16 @@ Renderer::Render()
     // This look generates camera rays and callse traceRay.
     // It also write to the color, normal, and depth images.
     // You should understand what this code does.
+    
+    if (_args.photonmapping) {
+        mapPhotons(_args.photonmapping);
+    }
+    Vector3f color;
     Camera* cam = _scene.getCamera();
+    Vector3f gatherSpot;
+    int nGatherPhotons = 50;
+    float maxDistance;
+    sway::bounded_priority_queue<struct Photon, std::vector<struct Photon>, cmp> bpq(nGatherPhotons, cmp(gatherSpot));
     for (int y = 0; y < h; ++y) {
         float ndcy = 2 * (y / (h - 1.0f)) - 1.0f;
         for (int x = 0; x < w; ++x) {
@@ -47,10 +58,17 @@ Renderer::Render()
             // Use PerspectiveCamera to generate a ray.
             // You should understand what generateRay() does.
             Ray r = cam->generateRay(Vector2f(ndcx, ndcy));
-
             Hit h;
-            Vector3f color = traceRay(r, cam->getTMin(), _args.bounces, h);
-
+            if (_args.photonmapping) {
+                maxDistance = 0.1;
+                _scene.getGroup()->intersect(r, 0.01, h);
+                gatherSpot = r.pointAtParameter(h.getT());
+                //TODO get color from photon map at hit area (monte carlo integration)
+                photonMap->kNearest(gatherSpot, bpq, maxDistance);
+                color = kdTree3D::colorAverage(bpq); //clears bpq
+            } else {
+                color = traceRay(r, cam->getTMin(), _args.bounces, h);
+            }
             image.setPixel(x, y, color);
             nimage.setPixel(x, y, (h.getNormal() + 1.0f) / 2.0f);
             float range = (_args.depth_max - _args.depth_min);
@@ -73,6 +91,35 @@ Renderer::Render()
     }
 }
 
+void
+Renderer::mapPhotons(int nPhotons)
+{
+    
+    //TODO fill this in
+    //monte carlo photon tracing for a nPhotons (100,000?) originating from the light source(s)
+    int photonsMapped = 0;
+    Hit h;
+    for (Light *light : _scene.lights) {
+        //printf("%d\n", nPhotons);
+        while (photonsMapped < nPhotons) {
+            //if (photonsSent >= nPhotons) break;
+            Vector3f origin = light->getRandomPosition();
+            Vector3f direction = light->getRandomDirection();
+            //origin.print();
+            h = Hit();
+            Ray photonRay(origin, direction);
+            if (_scene.getGroup()->intersect(photonRay, 0.01, h)) {
+                struct Photon photon;
+                photon.color = h.getMaterial()->getDiffuseColor();
+                photon.position = photonRay.pointAtParameter(h.getT());
+                photon.direction = direction.normalized();
+                photonMap->add(photon);
+                photonsMapped++;
+            }
+        }
+    }
+    printf("Photons Mapped: %d\n", photonMap->size);
+}
 
 
 Vector3f
@@ -126,7 +173,8 @@ Renderer::traceRay(Ray &r,
             if (_args.shadows) {
                 Ray rayToLight = Ray(r.pointAtParameter(h.getT()), toLight);
                 shadowHit = Hit();
-                if (!(_scene.getGroup()->intersect(rayToLight, epsilon, shadowHit))) {
+                bool hitObj = _scene.getGroup()->intersect(rayToLight, epsilon, shadowHit);
+                if (!(hitObj) || shadowHit.getT() > distToLight) {
                     color += h.getMaterial()->shade(r, h, toLight, intensity);
                 }
             } else {

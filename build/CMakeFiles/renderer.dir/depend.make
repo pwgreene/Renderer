@@ -119,6 +119,11 @@ CMakeFiles/renderer.dir/src/Octree.cpp.o: ../src/Octree.cpp
 CMakeFiles/renderer.dir/src/Octree.cpp.o: ../src/Octree.h
 CMakeFiles/renderer.dir/src/Octree.cpp.o: ../src/Ray.h
 
+CMakeFiles/renderer.dir/src/Renderer.cpp.o: ../include/KNN/kdTree.h
+CMakeFiles/renderer.dir/src/Renderer.cpp.o: ../include/KNN/sway/include/sway/bounded_priority_queue.hpp
+CMakeFiles/renderer.dir/src/Renderer.cpp.o: ../include/KNN/sway/include/sway/detail/minmaxheap.hpp
+CMakeFiles/renderer.dir/src/Renderer.cpp.o: ../include/KNN/sway/include/sway/ilog2.hpp
+CMakeFiles/renderer.dir/src/Renderer.cpp.o: ../include/KNN/sway/include/sway/minmaxheap.hpp
 CMakeFiles/renderer.dir/src/Renderer.cpp.o: ../include/vecmath/include/Matrix2f.h
 CMakeFiles/renderer.dir/src/Renderer.cpp.o: ../include/vecmath/include/Matrix3f.h
 CMakeFiles/renderer.dir/src/Renderer.cpp.o: ../include/vecmath/include/Matrix4f.h
@@ -175,6 +180,11 @@ CMakeFiles/renderer.dir/src/VecUtils.cpp.o: ../include/vecmath/include/vecmath.h
 CMakeFiles/renderer.dir/src/VecUtils.cpp.o: ../src/VecUtils.cpp
 CMakeFiles/renderer.dir/src/VecUtils.cpp.o: ../src/VecUtils.h
 
+CMakeFiles/renderer.dir/src/main.cpp.o: ../include/KNN/kdTree.h
+CMakeFiles/renderer.dir/src/main.cpp.o: ../include/KNN/sway/include/sway/bounded_priority_queue.hpp
+CMakeFiles/renderer.dir/src/main.cpp.o: ../include/KNN/sway/include/sway/detail/minmaxheap.hpp
+CMakeFiles/renderer.dir/src/main.cpp.o: ../include/KNN/sway/include/sway/ilog2.hpp
+CMakeFiles/renderer.dir/src/main.cpp.o: ../include/KNN/sway/include/sway/minmaxheap.hpp
 CMakeFiles/renderer.dir/src/main.cpp.o: ../include/vecmath/include/Matrix2f.h
 CMakeFiles/renderer.dir/src/main.cpp.o: ../include/vecmath/include/Matrix3f.h
 CMakeFiles/renderer.dir/src/main.cpp.o: ../include/vecmath/include/Matrix4f.h

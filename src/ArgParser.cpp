@@ -41,6 +41,9 @@ ArgParser::ArgParser(int argc, const char *argv[])
             bounces = atoi(argv[i]);
         } else if (!strcmp(argv[i], "-shadows")) {
             shadows = true;
+        } else if (!strcmp(argv[i], "-photonmapping")) {
+            i++; assert (i < argc);
+            photonmapping = atoi(argv[i]);
         }
 
         // supersampling

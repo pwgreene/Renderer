@@ -137,17 +137,17 @@ KNN/fast:
 .PHONY : KNN/fast
 
 #=============================================================================
-# Target rules for targets named vecmath
+# Target rules for targets named vecmath2
 
 # Build rule for target.
-vecmath: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 vecmath
-.PHONY : vecmath
+vecmath2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 vecmath2
+.PHONY : vecmath2
 
 # fast build rule for target.
-vecmath/fast:
-	$(MAKE) -f vecmath/CMakeFiles/vecmath.dir/build.make vecmath/CMakeFiles/vecmath.dir/build
-.PHONY : vecmath/fast
+vecmath2/fast:
+	$(MAKE) -f vecmath/CMakeFiles/vecmath2.dir/build.make vecmath/CMakeFiles/vecmath2.dir/build
+.PHONY : vecmath2/fast
 
 kdTree.o: kdTree.cpp.o
 
@@ -249,7 +249,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... kdTree"
 	@echo "... KNN"
-	@echo "... vecmath"
+	@echo "... vecmath2"
 	@echo "... kdTree.o"
 	@echo "... kdTree.i"
 	@echo "... kdTree.s"

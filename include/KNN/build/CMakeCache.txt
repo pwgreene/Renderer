@@ -223,6 +223,9 @@ kdTree_SOURCE_DIR:STATIC=/Users/Parker/Documents/MIT/Junior Fall/6.837/project/i
 sway_LIB_DEPENDS:STATIC=
 
 //Dependencies for target
+vecmath2_LIB_DEPENDS:STATIC=
+
+//Dependencies for target
 vecmath_LIB_DEPENDS:STATIC=
 
 

@@ -3,11 +3,13 @@
 
 int main(int argc, char **argv)
 {
-    Vector3f root = Vector3f(-1, 0, 0);
-    kdTree3D tree(root, 0, true);
+    Vector3f rootpos = Vector3f(-1, 0, 0);
+    Photon rootpoint;
+    kdTree3D tree(rootpoint, 0, true);
     
     Vector3f point;
-    int dim = 100;
+    Photon Photon;
+    int dim = 2;
     int neg;
     
     for (int i = 0; i < dim; i++) {
@@ -15,7 +17,8 @@ int main(int argc, char **argv)
             for (int k= 0; k < dim; k++) {
                 neg = pow(-1, i % 2);
                 point = Vector3f(neg*i,j,k);
-                tree.add(point);
+                Photon.position = point;
+                tree.add(Photon);
             }
         }
     }
@@ -24,10 +27,11 @@ int main(int argc, char **argv)
     printf("done creating %d\n", dim*dim*dim);
     
     Vector3f target = Vector3f(50, 43, 10);
-    sway::bounded_priority_queue<Vector3f, std::vector<Vector3f>, cmp> bpq(3, cmp(target));
-    tree.kNearest(target, bpq, 5);
+    sway::bounded_priority_queue<struct Photon, std::vector<struct Photon>, cmp> bpq(3, cmp(target));
+    float maxDistance = 0.1;
+    tree.kNearest(target, bpq, maxDistance);
     while (!bpq.empty()) {
-        bpq.top().print();
+        bpq.top().position.print();
         bpq.pop_top();
     }
 }

@@ -25,6 +25,7 @@ public:
     float depth_max;
     int bounces;
     bool shadows;
+    int photonmapping;
 
     // supersampling
     bool jitter;
