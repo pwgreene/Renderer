@@ -37,6 +37,8 @@ ilog2.hpp
 /Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/kdTree.cpp
 kdTree.h
 /Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/kdTree.h
+math.h
+/Users/Parker/Documents/MIT/Junior Fall/6.837/project/include/KNN/math.h
 iostream
 -
 iomanip

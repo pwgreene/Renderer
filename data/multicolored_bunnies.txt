@@ -1,0 +1,66 @@
+
+PerspectiveCamera {
+center 20 4 4
+direction -1 -.15 0
+up 0 1 0
+angle 30
+}
+
+Lights {
+numLights 1
+SpotLight {
+position 0 3 -6
+direction 0 -.3 1
+color 1 1 1
+hotspotAngle 10
+falloffAngle 20
+falloffDegree 2
+}
+}
+
+Background {
+color .05 .05 .05
+ambientLight .2 .2 .2
+
+}
+
+Materials {
+numMaterials 3
+MultiColoredMaterial {
+color 0 0 0
+p_refract 1
+refractionIndex 1.5
+}
+PhotonMaterial {
+color 1 1 1
+p_absorb 1.0
+}
+PhotonMaterial {
+color .8 .1 .1
+p_absorb 1.0
+}
+}
+
+Group {
+numObjects 2
+MaterialIndex 0
+Transform {
+Translate  0.5 -2.6 0
+Scale  12 12 12
+YRotate 0
+TriangleMesh {
+obj_file models/bunny_1k.obj
+}
+}
+MaterialIndex 1
+Transform {
+Translate 0.4 -8 4
+Scale 6 6 6
+YRotate 0
+TriangleMesh {
+obj_file models/cube2.obj
+}
+}
+
+}
+
