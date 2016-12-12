@@ -9,12 +9,12 @@ angle 30
 Lights {
 numLights 1
 QuadLight {
-A -1 2 1
-B -1 2 -1
-C 1 2 1
-D 1 2 -1
+A -.5 3 .5
+B -.5 3 -.5
+C .5 3 .5
+D .5 3 -.5
 normal 0 -1 0
-color .8 .8 .8
+color .9 .9 .9
 }
 }
 
@@ -24,57 +24,72 @@ ambientLight 0.2 0.2 0.2
 }
 
 Materials {
-numMaterials 7
-Material { diffuseColor 1 0 0
-specularColor 1 1 1
-shininess 20
+numMaterials 6
+PhotonMaterial {
+color .7 .15 .1
+p_reflectdiff .5
+p_absorb .5
 }
-Material { diffuseColor 0 1 0 }
-Material { diffuseColor 0 0 1 }
-Material { diffuseColor 1 0 0}
-Material { diffuseColor .9 .9 .9}
-Material { diffuseColor 0 0 0}
-Material { specularColor 0.7 0.7 0.7
-shininess 30
-diffuseColor 0.2 0.2 0.3}
+PhotonMaterial {
+color .15 .2 .75
+p_reflectdiff .5
+p_absorb .5
+}
+PhotonMaterial {
+color 0 0 0
+p_absorb 1.0
+}
+PhotonMaterial {
+color .7 .7 .7
+p_absorb 1.0
+}
+PhotonMaterial {
+color .4 .4 .4
+p_reflectspec 1.0
+}
+PhotonMaterial {
+color .7 .7 .7
+p_refract 1
+refractionIndex 1.5
+}
 }
 
 Group {
 numObjects 7
 MaterialIndex 4
 Sphere {
-center -1.5 -2 -1
+center -1.5 -2 -.8
 radius 1.0
 }
-MaterialIndex 6
+MaterialIndex 5
 Sphere {
-center 1.5 -2 1
+center 1.5 -2 2.2
 radius 1.0
 }
-MaterialIndex 4
+MaterialIndex 3
 Plane {
 normal 0 1 0
 offset -3
 }
-MaterialIndex 4
+MaterialIndex 3
 Plane {
 normal 0 0 1
 offset -3
 }
-MaterialIndex 2
+MaterialIndex 0
 Plane {
 normal 1 0 0
 offset -3
 }
-MaterialIndex 3
+MaterialIndex 1
 Plane {
 normal -1 0 0
 offset -3
 }
-MaterialIndex 5
+MaterialIndex 3
 Plane {
 normal 0 -1 0
-offset -3
+offset -3.05
 }
 }
 

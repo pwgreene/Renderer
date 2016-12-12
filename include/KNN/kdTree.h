@@ -3,9 +3,12 @@
 #include "bounded_priority_queue.hpp"
 
 struct Photon {
+    Vector3f start;
     Vector3f position;
     Vector3f direction;
     Vector3f color;
+    bool hitDiffuse = false;
+    bool hitSpecular = false;
 };
 
 class cmp {
@@ -35,7 +38,8 @@ public:
     void kNearest(Vector3f point, sway::bounded_priority_queue<Photon, std::vector<Photon>, cmp> &nearest,
                   float &max_distance);
     
-    static Vector3f colorAverage(sway::bounded_priority_queue<Photon, std::vector<Photon>, cmp> &nearest);
+    Vector3f gatherAndFilter(Vector3f point, sway::bounded_priority_queue<Photon, std::vector<Photon>, cmp> &nearest,
+                                    float max_distance, float k, bool isCaustic = false);
     
     bool getIsEmpty() {
         return _isEmpty;

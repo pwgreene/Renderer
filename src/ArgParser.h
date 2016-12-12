@@ -26,6 +26,10 @@ public:
     int bounces;
     bool shadows;
     int photonmapping;
+    int nIndirectWanted, nCausticWanted;
+    bool outline;
+    int stippling;
+    int num_views;
 
     // supersampling
     bool jitter;

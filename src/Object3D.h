@@ -6,6 +6,7 @@
 
 #include <string>
 
+
 class Object3D
 {
 public:
@@ -32,6 +33,7 @@ public:
 
     std::string   type;
     Material*     material;
+    PhotonMaterial* photonMaterial;
 };
 
 
@@ -129,6 +131,7 @@ public:
 private:
     Vector3f _v[3];
     Vector3f _normals[3];
+    
 };
 
 class Rectangle : public Object3D
@@ -143,6 +146,21 @@ public:
         
     }
     
+    Rectangle(const Vector3f &normal, const Vector3f p1, const Vector3f p2, const Vector3f p3, const Vector3f p4, Material *m) :
+    Object3D(m),
+    _normal(normal)
+    {
+        std::vector<float> x = {p1.x(), p2.x(), p3.x(), p4.x()};
+        std::vector<float> y = {p1.y(), p2.y(), p3.y(), p4.y()};
+        std::vector<float> z = {p1.z(), p2.z(), p3.z(), p4.z()};
+        _vecmin[0] = minvec(x);
+        _vecmin[1] = minvec(y);
+        _vecmin[2] = minvec(z);
+        _vecmax[0] = maxvec(x);
+        _vecmax[1] = maxvec(y);
+        _vecmax[2] = maxvec(z);
+        
+    }
     virtual bool intersect(const Ray &r, float tmin, Hit &h) const override;
     
 private:
@@ -151,6 +169,20 @@ private:
     Vector3f _vecmax; //(X2, Y2, Z2)
 //    Triangle triangle1;
 //    Triangle triangle2;
+    float minvec(std::vector<float> v) {
+        float smallest = v[0];
+        for (int i = 1; i < v.size(); i++) {
+            smallest = smallest < v[i] ? smallest : v[i];
+        }
+        return smallest;
+    }
+    float maxvec(std::vector<float> v) {
+        float largest = v[0];
+        for (int i = 1; i < v.size(); i++) {
+            largest = largest > v[i] ? largest : v[i];
+        }
+        return largest;
+    }
 };
 
 

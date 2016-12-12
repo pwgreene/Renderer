@@ -26,9 +26,11 @@ clampColorComponent(float c)
 }
 
 void
-Image::savePNG(const std::string &filename) const
+Image::savePNG(std::string &filename) const
 {
     assert(!filename.empty());
+    
+    filename = filename.append(".png");
 
     std::vector<uint8_t> buffer;
     buffer.resize(_width * _height * 3);

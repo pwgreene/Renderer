@@ -21,7 +21,7 @@ Lights {
 Background {
     color 0 0 0
     ambientLight 0.1 0.1 0.1 
-    cubeMap tex/church
+    cubeMap tex/tower
 }
 
 Materials {

@@ -7,6 +7,8 @@
 #include <float.h>
 #include <cmath>
 
+#define PI 3.141592654
+
 class Camera
 {
 public:
@@ -15,6 +17,7 @@ public:
     // Generate rays for each screen-space coordinate
     virtual Ray generateRay(const Vector2f &point) = 0;
     virtual float getTMin() const = 0;
+    virtual void rotateY(float degrees) = 0;
 };
 
 /// Fill in functions and add more fields if necessary
@@ -48,6 +51,8 @@ public:
     {
         return 0.0f;
     }
+    
+    virtual void rotateY(float degrees) override;
 
 private:
     Vector3f _center;

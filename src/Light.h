@@ -7,12 +7,14 @@
 #include "Material.h"
 
 #include <limits>
+#include <random>
 
 
 class Light
 {
   public:
     bool isArea;
+    float power;
     virtual ~Light() { }
 
     // in:  p           is the point to be shaded
@@ -24,9 +26,11 @@ class Light
                                  Vector3f &intensity, 
                                  float &distToLight) const = 0;
     
-    virtual Vector3f getRandomPosition() = 0;
+    virtual Vector3f getRandomPosition() const = 0;
     
     virtual Vector3f getRandomDirection() = 0;
+    
+    virtual Vector3f getCenter() const = 0;
     
     virtual Vector3f getColor() const = 0;
     
@@ -58,7 +62,11 @@ class DirectionalLight : public Light
         return _direction;
     }
     
-    virtual Vector3f getRandomPosition() override {
+    virtual Vector3f getRandomPosition() const override {
+        return Vector3f(0,0,0);
+    }
+    
+    virtual Vector3f getCenter() const override {
         return Vector3f(0,0,0);
     }
 
@@ -88,7 +96,11 @@ public:
         return _color;
     }
     
-    virtual Vector3f getRandomPosition() override {
+    virtual Vector3f getRandomPosition() const override {
+        return _position;
+    }
+    
+    virtual Vector3f getCenter() const override {
         return _position;
     }
     
@@ -107,7 +119,7 @@ class SpotLight : public Light
 {
 public:
     
-    SpotLight(const Vector3f &p, const Vector3f &d, const Vector3f &c, float hotspotAngle, float falloffAngle, int type) :
+    SpotLight(const Vector3f &p, const Vector3f &d, const Vector3f &c, float hotspotAngle, float falloffAngle, float pow, int type) :
     _position(p),
     _direction(d),
     _color(c),
@@ -116,6 +128,7 @@ public:
     _falloffDegree(type)
     {
         isArea = false;
+        power = pow;
     }
     
     virtual void getIllumination(const Vector3f &p,
@@ -128,11 +141,21 @@ public:
     }
     
     virtual Vector3f getRandomDirection() override {
-        //TODO implement this!
-        return Vector3f(0,0,0);
+        //random distribution of points on circle (not uniform-more points concentrated at center)
+//        float r = rand() / RANDMAX; // [0, 1]
+//        float theta = rand() / RANDMAX * 2*PI
+        Vector3f randDirection = Vector3f::CosWeightedRandomHemisphereDirection(_direction);
+        while (acos(Vector3f::dot(randDirection.normalized(), _direction.normalized())) > _hotspotAngle) {
+            randDirection = Vector3f::CosWeightedRandomHemisphereDirection(_direction);
+        }
+        return randDirection;
     }
     
-    virtual Vector3f getRandomPosition() override {
+    virtual Vector3f getRandomPosition() const override {
+        return _position;
+    }
+    
+    virtual Vector3f getCenter() const override {
         return _position;
     }
     
@@ -162,6 +185,7 @@ public:
     Material(lightColor, lightColor, shininess, refractionIndex)
     {
         isLight = true;
+        power = 300;
     }
     
     
@@ -178,7 +202,11 @@ public:
         _position = p;
     }
     
-    virtual Vector3f getRandomPosition() override {
+    virtual Vector3f getRandomPosition() const override {
+        return _position;
+    }
+    
+    virtual Vector3f getCenter() const override {
         return _position;
     }
     
@@ -198,12 +226,14 @@ protected:
 class QuadLight : public Light
 {
 public:
+    std::vector<Vector3f> points;
     QuadLight(Vector3f A,
                 Vector3f B,
                 Vector3f C,
                 Vector3f D,
                 Vector3f normal,
-                Vector3f color) :
+                Vector3f color,
+                float pow) :
     _normal(normal),
     _color(color)
     {
@@ -213,6 +243,7 @@ public:
         points.push_back(C);
         points.push_back(D);
         tmin = 0.01;
+        power = pow;
     }
     
     virtual void getIllumination(const Vector3f &p,
@@ -220,7 +251,9 @@ public:
                                  Vector3f &intensity,
                                  float &distToLight) const override;
     
-    virtual Vector3f getRandomPosition() override;
+    virtual Vector3f getRandomPosition() const override;
+    
+    virtual Vector3f getCenter() const override;
     
     virtual Vector3f getRandomDirection() override {
         return Vector3f::CosWeightedRandomHemisphereDirection(_normal);
@@ -230,8 +263,11 @@ public:
         return _color;
     }
     
+    Vector3f getNormal() const {
+        return _normal;
+    }
+    
 private:
-    std::vector<Vector3f> points;
     Vector3f _normal;
     Vector3f _color;
     float tmin;

@@ -25,3 +25,21 @@ Vector3f Material::shade(const Ray &ray,
     return I_diffuse*getDiffuseColor() + I_specular*getSpecularColor();
     
 }
+
+Vector3f ToonMaterial::shade(const Ray &ray,
+                         const Hit &hit,
+                         const Vector3f &dirToLight,
+                         const Vector3f &lightIntensity)
+{
+    Vector3f N = hit.getNormal();
+    float dot = Vector3f::dot(dirToLight, N);
+    float clamp = dot > 0.f ? dot : 0.f;
+    //step function
+    if (dot < .3) {
+        return getDiffuseColor()*lightIntensity/2.0;
+    } else if (0.3 < dot && dot < 0.9) {
+        return getDiffuseColor()*lightIntensity;
+    } else {
+        return lightIntensity;
+    }
+}

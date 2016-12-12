@@ -22,13 +22,19 @@ class Renderer
   private:
     Vector3f traceRay(Ray &ray, float tmin, int bounces, 
                       Hit &hit);
+    Vector3f traceEyeRay(Ray &ray, float tmin, int bounces,
+                      Hit &hit);
     void mapPhotons(int nPhotons);
+    int sendPhoton(Ray r, struct Photon &p);
 
     std::random_device rd;
     std::mt19937 gen;
     std::uniform_int_distribution<> dis;
     kdTree3D *photonMap;
+    kdTree3D *indirectPhotonMap;
     kdTree3D *causticMap;
+    kdTree3D *shadowMap;
+    int totalPhotons;
     ArgParser _args;
     SceneParser _scene;
     

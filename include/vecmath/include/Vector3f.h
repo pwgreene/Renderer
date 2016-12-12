@@ -6,7 +6,8 @@ class Vector2f;
 class Vector3f
 {
 public:
-
+    static const float radiansToDegrees(float rad);
+    static const float degreesToRadians(float deg);
 	static const Vector3f ZERO;
 	static const Vector3f UP;
 	static const Vector3f RIGHT;

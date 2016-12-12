@@ -1,4 +1,5 @@
 #include "kdTree.h"
+#include "math.h"
 #include <iostream>
 #include <iomanip>
 #include <cmath>
@@ -26,7 +27,7 @@ void kdTree3D::add(Photon point) {
 }
 
 void
-kdTree3D::kNearest(Vector3f point, sway::bounded_priority_queue<Photon, std::vector<Photon>, cmp> &nearest, float &max_distance)
+kdTree3D::kNearest(Vector3f point, sway::bounded_priority_queue<Photon, std::vector<Photon>, cmp> &nearest, float &maxDistanceSq)
 {
     if (_isEmpty) {
         return;
@@ -36,51 +37,42 @@ kdTree3D::kNearest(Vector3f point, sway::bounded_priority_queue<Photon, std::vec
     if (distToSplitPlane < 0) {
         //on left of splitting plane
         if (_leftChild != NULL)
-            _leftChild->kNearest(point, nearest, max_distance);
-        if ((_rightChild != NULL) && (distToSplitPlane < max_distance)) {
-            _rightChild->kNearest(point, nearest, max_distance);
+            _leftChild->kNearest(point, nearest, maxDistanceSq);
+        if ((_rightChild != NULL) && (distToSplitPlane*distToSplitPlane < maxDistanceSq)) {
+            _rightChild->kNearest(point, nearest, maxDistanceSq);
         }
     } else {
         if (_rightChild != NULL)
-            _rightChild->kNearest(point, nearest, max_distance);
-        if ((_leftChild != NULL) && (distToSplitPlane < max_distance)) {
-            _leftChild->kNearest(point, nearest, max_distance);
+            _rightChild->kNearest(point, nearest, maxDistanceSq);
+        if ((_leftChild != NULL) && (distToSplitPlane*distToSplitPlane < maxDistanceSq)) {
+            _leftChild->kNearest(point, nearest, maxDistanceSq);
         }
     }
     
-    float distToPhoton = (point - _rootpoint.position).abs();
-    if (distToPhoton < max_distance) {
+    float distToPhotonSq = (point - _rootpoint.position).absSquared();
+    if (distToPhotonSq < maxDistanceSq) {
         nearest.push(_rootpoint);
-        max_distance = distToPhoton;
+        //maxDistanceSq = (nearest.top().position - point).absSquared();
     }
-//    if ((point[i_partition] < _rootpoint.position[i_partition]) && (_leftChild != NULL)) {
-//        wentLeft = true;
-//        _leftChild->kNearest(point, nearest, max_distance);
-//    } else if (_rightChild != NULL)
-//        _rightChild->kNearest(point, nearest, max_distance);
-//    else {
-//        if ((point-_rootpoint.position).absSquared() < max_distance*max_distance)
-//            nearest.push(_rootpoint);
-//    }
-    
-//    if ((point-_rootpoint.position).absSquared() < (nearest.bottom().position-_rootpoint.position).absSquared()) {
-//        //recursively search the other subtree on the next axis
-//        if (wentLeft && _rightChild != NULL)
-//            _rightChild->kNearest(point, nearest, max_distance);
-//        else if (_leftChild != NULL)
-//            _leftChild->kNearest(point, nearest, max_distance);
-//    }
 }
 
-Vector3f kdTree3D::colorAverage(sway::bounded_priority_queue<Photon, std::vector<Photon>, cmp> &bpq) {
+Vector3f kdTree3D::gatherAndFilter(Vector3f point, sway::bounded_priority_queue<Photon, std::vector<Photon>, cmp> &bpq, float dSq, float k, bool isCaustic) {
     Vector3f totalColor(0, 0, 0);
+    float distance;
     int numPhotons = 0;
     while (!bpq.empty()) {
-        totalColor += bpq.top().color;
+        distance = (point - bpq.top().position).abs();
+        if (isCaustic)
+            totalColor += (1 - distance/(k*sqrt(dSq)))*bpq.top().color; //filter, for caustics only
+        else
+            totalColor += bpq.top().color;
         bpq.pop_top();
         numPhotons++;
     }
-    return totalColor/numPhotons;
+    if (isCaustic)
+        return totalColor/((1-2/(3*k))*M_PI*dSq);
+    else
+        return totalColor;
 }
 
 void kdTree3D::print(kdTree3D *p, int indent=0) {

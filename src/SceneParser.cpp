@@ -202,7 +202,11 @@ SceneParser::parseLights()
         } else if (strcmp(token, "SpotLight")==0) {
             lights.push_back(parseSpotLight());
         } else if (strcmp(token, "QuadLight")==0) {
-            lights.push_back(parseQuadLight());
+            Light *light = parseQuadLight();
+            lights.push_back(light);
+            QuadLight *qlight = (QuadLight *) light;
+            Material *mat = new LuminousMaterial(qlight->getColor(), Vector3f(0,0,0), 0, 0, qlight->getColor(), 0);
+            _objects.push_back(new Rectangle(qlight->getNormal(),qlight->points[0], qlight->points[1], qlight->points[2], qlight->points[3],mat));
         }
         else {
             printf ("Unknown token in parseLight: '%s'\n", token); 
@@ -258,6 +262,7 @@ SceneParser::parseSpotLight()
     Vector3f direction, position, color;
     float falloff = 0;
     float hotspotAngle = 30; //in degrees!
+    float power = 30;
     int falloffDegree = 1;
     getToken(token); assert(!strcmp(token, "{"));
     while (true) {
@@ -274,13 +279,15 @@ SceneParser::parseSpotLight()
             hotspotAngle = readFloat();
         } else if (!strcmp(token, "falloffDegree")) {
             falloffDegree = readInt();
+        } else if (!strcmp(token, "power")) {
+            power = readFloat();
         }
         else {
             assert(!strcmp(token, "}"));
             break;
         }
     }
-    return new SpotLight(position, direction, color, hotspotAngle, falloff, falloffDegree);
+    return new SpotLight(position, direction, color, hotspotAngle, falloff, power, falloffDegree);
 }
 
 Light *
@@ -288,6 +295,7 @@ SceneParser::parseQuadLight()
 {
     char token[MAX_PARSER_TOKEN_LENGTH];
     Vector3f A, B, C, D, normal, color;
+    float power = 30;
     getToken(token); assert(!strcmp(token, "{"));
     while (true) {
         getToken(token);
@@ -303,13 +311,15 @@ SceneParser::parseQuadLight()
             normal = readVector3f();
         } else if (!strcmp(token, "color")) {
             color = readVector3f();
+        } else if (!strcmp(token, "power")) {
+            power = readFloat();
         }
         else {
             assert(!strcmp(token, "}"));
             break;
         }
     }
-    return new QuadLight(A, B, C, D, normal, color);
+    return new QuadLight(A, B, C, D, normal, color, power);
 }
 
 // ====================================================================
@@ -332,7 +342,15 @@ SceneParser::parseMaterials()
             _materials.push_back(parseMaterial());
         } else if (!strcmp(token, "LuminousMaterial")) {
             _materials.push_back(parseLuminousMaterial());
-        } else {
+        } else if (!strcmp(token, "PhotonMaterial")) {
+            _materials.push_back(parsePhotonMaterial());
+        } else if (!strcmp(token, "ToonMaterial")) {
+            _materials.push_back(parseToonMaterial());
+        } else if (!strcmp(token, "MultiColoredMaterial")) {
+            _materials.push_back(parseMultiColoredMaterial());
+        }
+        
+        else {
             printf ("Unknown token in parseMaterial: '%s'\n", token); 
             exit(0);
         }
@@ -376,6 +394,139 @@ SceneParser::parseMaterial()
     Material *answer = new Material(diffuseColor, specularColor, shininess, refractionIndex);
 
 
+    return answer;
+}
+
+ToonMaterial *
+SceneParser::parseToonMaterial()
+{
+    char token[MAX_PARSER_TOKEN_LENGTH];
+    char filename[MAX_PARSER_TOKEN_LENGTH];
+    filename[0] = 0;
+    Vector3f diffuseColor(1,1,1), specularColor(0,0,0);
+    float shininess = 0;
+    float refractionIndex = 0;
+    getToken(token); assert(!strcmp(token, "{"));
+    while (true) {
+        getToken(token);
+        if (strcmp(token, "diffuseColor")==0) {
+            diffuseColor = readVector3f();
+        }
+        else if (strcmp(token, "specularColor")==0) {
+            specularColor = readVector3f();
+        }
+        else if (strcmp(token, "shininess")==0) {
+            shininess = readFloat();
+        }
+        else if (strcmp(token, "bump")==0) {
+            getToken(token);
+        }
+        else if (strcmp(token, "refractionIndex")==0) {
+            refractionIndex = readFloat();
+        }
+        else {
+            assert(!strcmp(token, "}"));
+            break;
+        }
+    }
+    ToonMaterial *answer = new ToonMaterial(diffuseColor, specularColor, shininess, refractionIndex);
+    
+    
+    return answer;
+}
+
+PhotonMaterial *
+SceneParser::parsePhotonMaterial()
+{
+    char token[MAX_PARSER_TOKEN_LENGTH];
+    char filename[MAX_PARSER_TOKEN_LENGTH];
+    filename[0] = 0;
+    Vector3f color;
+    float shininess = 0;
+    float fadeDistance;
+    float p_reflectdiff = 0, p_reflectspec = 0, p_refract = 0, p_absorb = 0;
+    float refractionIndex = 0;
+    bool isDiffracting = false;
+    getToken(token); assert(!strcmp(token, "{"));
+    while (true) {
+        getToken(token);
+        if (strcmp(token, "color")==0) {
+            color = readVector3f();
+        }
+        else if (strcmp(token, "p_reflectdiff")==0) {
+            p_reflectdiff = readFloat();
+        }
+        else if (strcmp(token, "p_reflectspec")==0) {
+            p_reflectspec = readFloat();
+        }
+        else if (strcmp(token, "p_refract")==0) {
+            p_refract = readFloat();
+        }
+        else if (strcmp(token, "p_absorb")==0) {
+            p_absorb = readFloat();
+        }
+        else if (strcmp(token, "refractionIndex")==0) {
+            refractionIndex = readFloat();
+        }
+        else if (strcmp(token, "shininess")==0) {
+            shininess = readFloat();
+        }
+        else if (strcmp(token, "diffracting")==0) {
+            isDiffracting = true;
+        }
+        else if (strcmp(token, "fadeDistance")==0) {
+            fadeDistance = readFloat();
+        }
+        else {
+            assert(!strcmp(token, "}"));
+            break;
+        }
+    }
+    PhotonMaterial *answer = new PhotonMaterial(color, p_reflectdiff, p_reflectspec, p_refract, p_absorb, refractionIndex, isDiffracting, shininess, fadeDistance);
+    
+    
+    return answer;
+}
+
+MultiColoredMaterial *
+SceneParser::parseMultiColoredMaterial()
+{
+    char token[MAX_PARSER_TOKEN_LENGTH];
+    char filename[MAX_PARSER_TOKEN_LENGTH];
+    filename[0] = 0;
+    Vector3f color;
+    std::vector<Vector3f> colors;
+    float p_reflectdiff = 0, p_reflectspec = 0, p_refract = 0, p_absorb = 0;
+    float refractionIndex = 0;
+    getToken(token); assert(!strcmp(token, "{"));
+    while (true) {
+        getToken(token);
+        if (strcmp(token, "color")==0) {
+            color = readVector3f();
+        }
+        else if (strcmp(token, "p_reflectdiff")==0) {
+            p_reflectdiff = readFloat();
+        }
+        else if (strcmp(token, "p_reflectspec")==0) {
+            p_reflectspec = readFloat();
+        }
+        else if (strcmp(token, "p_refract")==0) {
+            p_refract = readFloat();
+        }
+        else if (strcmp(token, "p_absorb")==0) {
+            p_absorb = readFloat();
+        }
+        else if (strcmp(token, "refractionIndex")==0) {
+            refractionIndex = readFloat();
+        }
+        else {
+            assert(!strcmp(token, "}"));
+            break;
+        }
+    }
+    MultiColoredMaterial *answer = new MultiColoredMaterial(color, p_reflectdiff, p_reflectspec, p_refract, p_absorb, refractionIndex, colors);
+    
+    
     return answer;
 }
 
@@ -429,7 +580,7 @@ SceneParser::parseLuminousMaterial()
 // ====================================================================
 
 Object3D *
-SceneParser::parseObject(char token[MAX_PARSER_TOKEN_LENGTH]) 
+SceneParser::parseObject(char token[MAX_PARSER_TOKEN_LENGTH])
 {
     Object3D *answer = NULL;
     if (!strcmp(token, "Group")) {            

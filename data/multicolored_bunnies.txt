@@ -9,8 +9,8 @@ angle 30
 Lights {
 numLights 1
 SpotLight {
-position 0 3 -6
-direction 0 -.3 1
+position 0 1 -6
+direction 0 -.1 1
 color 1 1 1
 hotspotAngle 10
 falloffAngle 20
@@ -25,9 +25,9 @@ ambientLight .2 .2 .2
 }
 
 Materials {
-numMaterials 3
-MultiColoredMaterial {
-color 0 0 0
+numMaterials 4
+PhotonMaterial {
+color 0.2 0.2 1
 p_refract 1
 refractionIndex 1.5
 }
@@ -39,13 +39,27 @@ PhotonMaterial {
 color .8 .1 .1
 p_absorb 1.0
 }
+PhotonMaterial {
+color 1 0.2 0.2
+p_refract 1
+refractionIndex 1.5
+}
 }
 
 Group {
-numObjects 2
+numObjects 3
 MaterialIndex 0
 Transform {
 Translate  0.5 -2.6 0
+Scale  12 12 12
+YRotate 0
+TriangleMesh {
+obj_file models/bunny_1k.obj
+}
+}
+MaterialIndex 3
+Transform {
+Translate  0.5 -1.5 3
 Scale  12 12 12
 YRotate 0
 TriangleMesh {

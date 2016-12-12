@@ -25,7 +25,6 @@ main(int argc, const char *argv[])
             ;
         return 1;
     }
-
     ArgParser argsParser(argc, argv);
     Renderer renderer(argsParser);
     renderer.Render();

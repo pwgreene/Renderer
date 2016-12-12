@@ -44,6 +44,16 @@ ArgParser::ArgParser(int argc, const char *argv[])
         } else if (!strcmp(argv[i], "-photonmapping")) {
             i++; assert (i < argc);
             photonmapping = atoi(argv[i]);
+            nIndirectWanted = photonmapping;
+            nCausticWanted = photonmapping;
+        } else if (!strcmp(argv[i], "-outline")) {
+            outline = true;
+        } else if (!strcmp(argv[i], "-stippling")) {
+            i++; assert (i < argc);
+            stippling = atoi(argv[i]);
+        } else if (!strcmp(argv[i], "-num_views")) {
+            i++; assert (i < argc);
+            num_views = atoi(argv[i]);
         }
 
         // supersampling
@@ -69,6 +79,9 @@ ArgParser::ArgParser(int argc, const char *argv[])
     std::cout << "- depth_max: " << depth_max << std::endl;
     std::cout << "- bounces: " << bounces << std::endl;
     std::cout << "- shadows: " << shadows << std::endl;
+    std::cout << "- photons: " << photonmapping << std::endl;
+    std::cout << "- stippling: " << stippling << std::endl;
+    std::cout << "- num_views: " << num_views << std::endl;
 }
 
 void
@@ -88,6 +101,7 @@ ArgParser::defaultValues()
     depth_max = 1;
     bounces = 0;
     shadows = false;
+    num_views = 1;
 
     // sampling
     jitter = false;

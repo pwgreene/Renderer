@@ -88,7 +88,7 @@ bool Plane::intersect(const Ray &r, float tmin, Hit &h) const
     float t = (_d - Vector3f::dot(_normal, r.getOrigin())) / Vector3f::dot(_normal, r.getDirection());
     //verify intersection is closer than previous and not behind eye
     if (t < h.getT() && t > tmin) {
-        h.set(t, material, _normal);
+        h.set(t, this->material, _normal);
         return true;
     }
     return false;
@@ -113,7 +113,7 @@ bool Triangle::intersect(const Ray &r, float tmin, Hit &h) const
         beta <= 1 && beta >= 0 && gamma <= 1 && gamma >= 0 && alpha <= 1 && alpha >= 0) {
         Vector3f P = alpha*a + beta*b + gamma*c;
         Vector3f normal = alpha*getNormal(0) + beta*getNormal(1) + gamma*getNormal(2);
-        h.set(t, material, normal);
+        h.set(t, this->material, normal);
         return true;
     }
     return false;
@@ -159,7 +159,7 @@ bool Rectangle::intersect(const Ray &r, float tmin, Hit &h) const
     
     float new_t = t_start > tmin ? t_start : t_end;
     if ((t_start <= t_end) && (t_end >= tmin) && new_t < h.getT()) {
-        h.set(new_t, material, _normal);
+        h.set(new_t, this->material, _normal);
         return true;
     }
     return false;

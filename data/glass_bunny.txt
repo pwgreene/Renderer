@@ -1,0 +1,63 @@
+
+PerspectiveCamera {
+center 5 5 15
+direction -.5 -.5 -1.5
+up 0 1 0
+angle 30
+}
+
+Lights {
+numLights 1
+QuadLight {
+A 1 3.6 -4
+B 1 2.4 -6
+C 0 3.6 -4
+D 0 2.4 -6
+normal 0 -2 4
+color 1 1 1
+power 15
+}
+}
+
+Background {
+color 0 0 0
+ambientLight 0.1 0.1 0.1
+}
+
+Materials {
+numMaterials 3
+PhotonMaterial {
+color 1 1 1
+p_refract .9
+p_reflectspec .1
+refractionIndex 1.5
+}
+PhotonMaterial {
+color .8 .8 1
+p_absorb 1.0
+}
+PhotonMaterial {
+color .8 .1 .1
+p_absorb 1.0
+}
+}
+
+Group {
+numObjects 2
+MaterialIndex 0
+Transform {
+Translate  0.5 -1.5 0
+Scale  1.2 1.2 1.2
+YRotate 0
+TriangleMesh {
+obj_file models/bunny.obj
+}
+}
+MaterialIndex 1
+Plane {
+normal 0 1 0
+offset -2
+}
+
+}
+

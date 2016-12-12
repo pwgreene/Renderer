@@ -56,7 +56,7 @@ public:
     static Image loadPNG(const std::string &filename);
 
     // Save contents of image to given file name in PNG file format.
-    void savePNG(const std::string &filename) const;
+    void savePNG(std::string &filename) const;
 
     // Return an absolute difference betweenthe given images
     static Image compare(const Image & img1, const Image & img2);

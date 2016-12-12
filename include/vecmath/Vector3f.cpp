@@ -6,9 +6,19 @@
 #include "Vector3f.h"
 #include "Vector2f.h"
 
+#define PI 3.141592654
+
 //////////////////////////////////////////////////////////////////////////
 // Public
 //////////////////////////////////////////////////////////////////////////
+
+const float Vector3f::radiansToDegrees(float rad) {
+    return 180*rad/PI;
+}
+
+const float Vector3f::degreesToRadians(float deg) {
+    return deg*PI/180.;
+}
 
 // static
 const Vector3f Vector3f::ZERO = Vector3f( 0, 0, 0 );

@@ -73,6 +73,9 @@ class SceneParser
     void parseMaterials();
     Material * parseMaterial();
     LuminousMaterial * parseLuminousMaterial();
+    PhotonMaterial * parsePhotonMaterial();
+    MultiColoredMaterial * parseMultiColoredMaterial();
+    ToonMaterial * parseToonMaterial();
 
     Object3D * parseObject(char token[MAX_PARSER_TOKEN_LENGTH]);
     Group * parseGroup();

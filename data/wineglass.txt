@@ -1,0 +1,77 @@
+
+PerspectiveCamera {
+center 12 10 -18
+direction -1.2 -1 1.8
+up 0 1 0
+angle 30
+}
+
+Lights {
+numLights 1
+SpotLight {
+position 0 6 -5
+direction 0 -.3 .6
+color 1 1 1
+power 75
+falloffAngle 60
+hotspotAngle 28
+falloffDegree 10
+}
+}
+
+Background {
+color 0 0 0
+ambientLight 0.1 0.1 0.1
+}
+
+Materials {
+numMaterials 4
+PhotonMaterial {
+color .85 .85 .85
+p_refract 1
+refractionIndex 1.5
+}
+PhotonMaterial {
+color 1 1 1
+p_absorb 1.0
+}
+PhotonMaterial {
+color .8 .1 .1
+p_absorb 1.0
+}
+PhotonMaterial {
+color .6 0.05 .35
+p_refract 1
+refractionIndex 1.33
+fadeDistance 1.6
+}
+}
+
+Group {
+numObjects 3
+MaterialIndex 0
+Transform {
+Translate  0.5 .85 0
+Scale  1.2 1.2 1.2
+YRotate 0
+TriangleMesh {
+obj_file models/wineglass.obj
+}
+}
+MaterialIndex 3
+Transform {
+Translate  0.5 .83 0
+Scale  1.15 1.15 1.15
+YRotate 0
+TriangleMesh {
+obj_file models/glassliquid.obj
+}
+}
+MaterialIndex 1
+Plane {
+normal 0 1 0
+offset -2
+}
+
+}
+
