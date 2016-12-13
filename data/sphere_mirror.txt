@@ -1,0 +1,63 @@
+
+PerspectiveCamera {
+center -14 6 -1
+direction 1.4 -.6 0
+up 0 1 0
+angle 30
+}
+
+Lights {
+numLights 1
+SpotLight {
+position .4 3 -3
+direction -.04 -.3 .3
+color 1 1 1
+falloffAngle 12
+hotspotAngle 6
+falloffDegree 2
+power 30
+}
+}
+
+Background {
+color 0 0 0
+ambientLight 0 0 0
+
+}
+
+Materials {
+numMaterials 2
+PhotonMaterial {
+color 1 1 1
+p_reflectspec 1.0
+}
+PhotonMaterial {
+color 1 1 1
+p_absorb 1.0
+}
+}
+
+Group {
+numObjects 4
+MaterialIndex 0
+Sphere {
+center 0 -.5 0
+radius .5
+}
+MaterialIndex 0
+Sphere {
+center 2 .75 -2
+radius 1.5
+}
+MaterialIndex 0
+Sphere {
+center 1.5 0 .5
+radius 1
+}
+MaterialIndex 1
+Plane {
+normal 0 1 0
+offset -1
+}
+}
+

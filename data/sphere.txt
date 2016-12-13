@@ -8,13 +8,13 @@ angle 30
 
 Lights {
 numLights 1
-SpotLight {
-position 0 4 2
-direction 0 -.4 -.2
+QuadLight {
+A -5 4 0
+B 5 4 0
+C -5 4 6
+D 5 4 6
+normal 0 -.4 -.3
 color 1 1 1
-hotspotAngle 10
-falloffAngle 30
-falloffDegree 2
 }
 }
 

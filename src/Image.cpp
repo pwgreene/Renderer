@@ -30,7 +30,8 @@ Image::savePNG(std::string &filename) const
 {
     assert(!filename.empty());
     
-    filename = filename.append(".png");
+    std::string filenameWithExt = filename;
+    filenameWithExt.append(".png");
 
     std::vector<uint8_t> buffer;
     buffer.resize(_width * _height * 3);
@@ -45,7 +46,7 @@ Image::savePNG(std::string &filename) const
         }
     }
 
-    stbi_write_png(filename.c_str(), _width, _height, 3, &buffer[0], _width * 3);
+    stbi_write_png(filenameWithExt.c_str(), _width, _height, 3, &buffer[0], _width * 3);
 }
 
 Image 

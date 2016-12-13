@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  12 DEC 2016 17:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  13 DEC 2016 18:25
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -183,6 +183,120 @@ ference \hbox to\hsize {\normalfont \footnotesize \hfil \box \@tempboxa \hfil }
 Package: etoolbox 2015/05/04 v2.2 e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count98
 )
+(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen135
+\Hy@linkcounter=\count99
+\Hy@pagecounter=\count100
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count101
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count102
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen136
+\Fld@menulength=\count103
+\Field@Width=\dimen137
+\Fld@charsize=\dimen138
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count104
+\c@Item=\count105
+\c@Hfootnote=\count106
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count107
+\c@bookmark@seq@number=\count108
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip44
+)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/cite/cite.sty
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
@@ -190,7 +304,7 @@ Package: cite 2015/02/27  v 5.5
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
-\@mathmargin=\skip44
+\@mathmargin=\skip45
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -199,49 +313,49 @@ Package: amstext 2000/06/29 v2.01
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks16
-\ex@=\dimen135
+\ex@=\dimen139
 ))
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen136
+\pmbraise@=\dimen140
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count99
+\inf@bad=\count109
 LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count100
-\leftroot@=\count101
+\uproot@=\count110
+\leftroot@=\count111
 LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count102
-\DOTSCASE@=\count103
+\classnum@=\count112
+\DOTSCASE@=\count113
 LaTeX Info: Redefining \ldots on input line 378.
 LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
 \Mathstrutbox@=\box28
 \strutbox@=\box29
-\big@size=\dimen137
+\big@size=\dimen141
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count104
-\c@MaxMatrixCols=\count105
-\dotsspace@=\muskip10
-\c@parentequation=\count106
-\dspbrk@lvl=\count107
+\macc@depth=\count114
+\c@MaxMatrixCols=\count115
+\dotsspace@=\muskip11
+\c@parentequation=\count116
+\dspbrk@lvl=\count117
 \tag@help=\toks17
-\row@=\count108
-\column@=\count109
-\maxfields@=\count110
+\row@=\count118
+\column@=\count119
+\maxfields@=\count120
 \andhelp@=\toks18
-\eqnshift@=\dimen138
-\alignsep@=\dimen139
-\tagshift@=\dimen140
-\tagwidth@=\dimen141
-\totwidth@=\dimen142
-\lineht@=\dimen143
+\eqnshift@=\dimen142
+\alignsep@=\dimen143
+\tagshift@=\dimen144
+\tagwidth@=\dimen145
+\totwidth@=\dimen146
+\lineht@=\dimen147
 \@envbody=\toks19
-\multlinegap=\skip45
-\multlinetaggap=\skip46
+\multlinegap=\skip46
+\multlinetaggap=\skip47
 \mathdisplay@stack=\toks20
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
@@ -252,82 +366,51 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@ALC@unique=\count111
-\c@ALC@line=\count112
-\c@ALC@rem=\count113
-\c@ALC@depth=\count114
-\ALC@tlm=\skip47
-\algorithmicindent=\skip48
+\c@ALC@unique=\count121
+\c@ALC@line=\count122
+\c@ALC@rem=\count123
+\c@ALC@depth=\count124
+\ALC@tlm=\skip48
+\algorithmicindent=\skip49
 )
 (./final_report_pwgreene.aux)
 \openout1 = `final_report_pwgreene.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 382.
-LaTeX Font Info:    ... okay on input line 382.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 382.
-LaTeX Font Info:    ... okay on input line 382.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 382.
-LaTeX Font Info:    ... okay on input line 382.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 382.
-LaTeX Font Info:    ... okay on input line 382.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 382.
-LaTeX Font Info:    ... okay on input line 382.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 382.
-LaTeX Font Info:    ... okay on input line 382.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 383.
+LaTeX Font Info:    ... okay on input line 383.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 383.
+LaTeX Font Info:    ... okay on input line 383.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 383.
+LaTeX Font Info:    ... okay on input line 383.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 383.
+LaTeX Font Info:    ... okay on input line 383.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 383.
+LaTeX Font Info:    ... okay on input line 383.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 383.
+LaTeX Font Info:    ... okay on input line 383.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 383.
+LaTeX Font Info:    ... okay on input line 383.
 
 -- Lines per column: 50 (exact).
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count115
-\scratchdimen=\dimen144
+\scratchcounter=\count125
+\scratchdimen=\dimen148
 \scratchbox=\box30
-\nofMPsegments=\count116
-\nofMParguments=\count117
+\nofMPsegments=\count126
+\nofMParguments=\count127
 \everyMPshowfont=\toks21
-\MPscratchCnt=\count118
-\MPscratchDim=\dimen145
-\MPnumerator=\count119
-\makeMPintoPDFobject=\count120
+\MPscratchCnt=\count128
+\MPscratchDim=\dimen149
+\MPnumerator=\count129
+\makeMPintoPDFobject=\count130
 \everyMPtoPDFconversion=\toks22
-) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
-
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
-
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
+)
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
@@ -338,221 +421,218 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
+\AtBeginShipoutBox=\box31
+Package hyperref Info: Link coloring OFF on input line 383.
 
-Underfull \hbox (badness 1546) in paragraph at lines 505--506
-[]\OT1/ptm/m/n/12 Photon Map-ping was ini-tially in-tro-duced by
- []
+(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
-<prism0.png, id=1, 803.0pt x 803.0pt>
-File: prism0.png Graphic file (type png)
- <use prism0.png>
-Package pdftex.def Info: prism0.png used on input line 512.
-(pdftex.def)             Requested size: 252.94499pt x 252.94633pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 512--514
-[][]
- []
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 514.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 514.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 514.
-<prism77.png, id=2, 803.0pt x 803.0pt>
-File: prism77.png Graphic file (type png)
- <use prism77.png>
-Package pdftex.def Info: prism77.png used on input line 516.
-(pdftex.def)             Requested size: 252.94499pt x 252.94633pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 516--518
-[][]
- []
-
-
-Overfull \hbox (2.75995pt too wide) in paragraph at lines 511--519
-[]$[]$ $[]$ 
- []
-
-<pink_diamond.png, id=3, 803.0pt x 803.0pt>
-File: pink_diamond.png Graphic file (type png)
- <use pink_diamond.png>
-Package pdftex.def Info: pink_diamond.png used on input line 524.
-(pdftex.def)             Requested size: 252.94499pt x 252.94633pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 524--526
-[][]
- []
-
-<orange_bunny.png, id=4, 803.0pt x 803.0pt>
-File: orange_bunny.png Graphic file (type png)
- <use orange_bunny.png>
-Package pdftex.def Info: orange_bunny.png used on input line 528.
-(pdftex.def)             Requested size: 252.94499pt x 252.94633pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 528--530
-[][]
- []
-
-
-Overfull \hbox (2.75995pt too wide) in paragraph at lines 523--531
-[]$[]$ $[]$ 
- []
-
-<wineglass_full.png, id=5, 803.0pt x 803.0pt>
-File: wineglass_full.png Graphic file (type png)
- <use wineglass_full.png>
-Package pdftex.def Info: wineglass_full.png used on input line 535.
-(pdftex.def)             Requested size: 505.89pt x 505.90494pt.
-
-
-! LaTeX Error: \begin{figure*} on input line 534 ended by \end{figure}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.538 \end{figure}
-                  
-? 
-<sphere_spot.png, id=6, 803.0pt x 803.0pt>
-File: sphere_spot.png Graphic file (type png)
- <use sphere_spot.png>
-Package pdftex.def Info: sphere_spot.png used on input line 542.
-(pdftex.def)             Requested size: 180.67499pt x 180.6672pt.
-
-<sphere_quad.png, id=7, 803.0pt x 803.0pt>
-File: sphere_quad.png Graphic file (type png)
- <use sphere_quad.png>
-Package pdftex.def Info: sphere_quad.png used on input line 547.
-(pdftex.def)             Requested size: 180.67499pt x 180.6672pt.
-
-Overfull \hbox (2.75995pt too wide) in paragraph at lines 541--551
-[]$[]$ $[]$ 
- []
-
-
-LaTeX Warning: File `dragon_stippling.png' not found on input line 556.
-
-
-! Package pdftex.def Error: File `dragon_stippling.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.556 ...aphics[width=3.5in]{dragon_stippling.png}
-                                                  
-? 
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 556.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-<bunny_stippling.png, id=8, 803.0pt x 803.0pt>
-File: bunny_stippling.png Graphic file (type png)
- <use bunny_stippling.png>
-Package pdftex.def Info: bunny_stippling.png used on input line 561.
-(pdftex.def)             Requested size: 252.94499pt x 252.94633pt.
+\c@section@level=\count131
+)
+LaTeX Info: Redefining \ref on input line 383.
+LaTeX Info: Redefining \pageref on input line 383.
+LaTeX Info: Redefining \nameref on input line 383.
 
-Overfull \hbox (2.75995pt too wide) in paragraph at lines 555--565
-[]$[]$ $[]$ 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 662--664
-
- []
+(./final_report_pwgreene.out) (./final_report_pwgreene.out)
+\@outlinefile=\write3
+\openout3 = `final_report_pwgreene.out'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 665--667
-
- []
-
-Missing character: There is no ø in font ptmr7t!
-
-Underfull \hbox (badness 10000) in paragraph at lines 668--670
-
- []
-
-
-Underfull \hbox (badness 2027) in paragraph at lines 671--673
-[]\OT1/ptm/m/n/9 Jensen, Hen-rik Wann: ``Global Il-lu-mi-na-tion Us-ing Pho-ton
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 671--673
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 674--676
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 677--679
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 680--682
-
+Underfull \hbox (badness 1546) in paragraph at lines 506--507
+[]\OT1/ptm/m/n/12 Photon Map-ping was ini-tially in-tro-duced by
  []
 
 [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-Underfull \hbox (badness 1527) in paragraph at lines 683--685
+<pink_diamond.png, id=56, 803.0pt x 803.0pt>
+File: pink_diamond.png Graphic file (type png)
+ <use pink_diamond.png>
+Package pdftex.def Info: pink_diamond.png used on input line 522.
+(pdftex.def)             Requested size: 252.94499pt x 252.94633pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 522--524
+[][]
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 524.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 524.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 524.
+<orange_bunny.png, id=57, 803.0pt x 803.0pt>
+File: orange_bunny.png Graphic file (type png)
+ <use orange_bunny.png>
+Package pdftex.def Info: orange_bunny.png used on input line 526.
+(pdftex.def)             Requested size: 252.94499pt x 252.94633pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 526--528
+[][]
+ []
+
+
+Overfull \hbox (2.75995pt too wide) in paragraph at lines 521--529
+[]$[]$ $[]$ 
+ []
+
+<wineglass_full.png, id=58, 803.0pt x 803.0pt>
+File: wineglass_full.png Graphic file (type png)
+ <use wineglass_full.png>
+Package pdftex.def Info: wineglass_full.png used on input line 534.
+(pdftex.def)             Requested size: 361.34999pt x 361.35892pt.
+
+<prism0.png, id=61, 803.0pt x 803.0pt>
+File: prism0.png Graphic file (type png)
+ <use prism0.png>
+Package pdftex.def Info: prism0.png used on input line 541.
+(pdftex.def)             Requested size: 252.94499pt x 252.94633pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 541--543
+[][]
+ []
+
+<prism77.png, id=62, 803.0pt x 803.0pt>
+File: prism77.png Graphic file (type png)
+ <use prism77.png>
+Package pdftex.def Info: prism77.png used on input line 545.
+(pdftex.def)             Requested size: 252.94499pt x 252.94633pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 545--547
+[][]
+ []
+
+
+Overfull \hbox (2.75995pt too wide) in paragraph at lines 540--548
+[]$[]$ $[]$ 
+ []
+
+<sphere_spot.png, id=65, 803.0pt x 803.0pt>
+File: sphere_spot.png Graphic file (type png)
+ <use sphere_spot.png>
+Package pdftex.def Info: sphere_spot.png used on input line 554.
+(pdftex.def)             Requested size: 180.67499pt x 180.6672pt.
+
+<sphere_quad.png, id=66, 803.0pt x 803.0pt>
+File: sphere_quad.png Graphic file (type png)
+ <use sphere_quad.png>
+Package pdftex.def Info: sphere_quad.png used on input line 559.
+(pdftex.def)             Requested size: 180.67499pt x 180.6672pt.
+
+Overfull \hbox (2.75995pt too wide) in paragraph at lines 553--563
+[]$[]$ $[]$ 
+ []
+
+<dragon_stippling.png, id=67, 803.0pt x 803.0pt>
+File: dragon_stippling.png Graphic file (type png)
+ <use dragon_stippling.png>
+Package pdftex.def Info: dragon_stippling.png used on input line 568.
+(pdftex.def)             Requested size: 252.94499pt x 252.94633pt.
+
+<bunny_stippling.png, id=68, 803.0pt x 803.0pt>
+File: bunny_stippling.png Graphic file (type png)
+ <use bunny_stippling.png>
+Package pdftex.def Info: bunny_stippling.png used on input line 573.
+(pdftex.def)             Requested size: 252.94499pt x 252.94633pt.
+
+Overfull \hbox (2.75995pt too wide) in paragraph at lines 567--577
+[]$[]$ $[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 670--672
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 673--675
+
+ []
+
+Missing character: There is no ø in font ptmr7t!
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--678
+
+ []
+
+
+Underfull \hbox (badness 2027) in paragraph at lines 679--681
+[]\OT1/ptm/m/n/9 Jensen, Hen-rik Wann: ``Global Il-lu-mi-na-tion Us-ing Pho-ton
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 679--681
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 682--684
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 685--687
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 688--690
+
+ []
+
+
+Underfull \hbox (badness 1527) in paragraph at lines 691--693
 []\OT1/ptm/m/n/9 M. T. Li and C. M. Wang. ``A 3D Painterly Ren-der-ing
  []
 
 
-Underfull \hbox (badness 2707) in paragraph at lines 683--685
+Underfull \hbox (badness 2707) in paragraph at lines 691--693
 \OT1/ptm/m/n/9 Frame-work for Pho-ton Map-ping," Jour-nal of In-for-ma-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 683--685
+Underfull \hbox (badness 10000) in paragraph at lines 691--693
 
  []
 
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 724.
+[2
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+] [3 <./pink_diamond.png (PNG copy)> <./orange_bunny.png (PNG copy)>]
+[4 <./wineglass_full.png (PNG copy)>] [5 <./prism0.png (PNG copy)> <./prism77.p
+ng (PNG copy)> <./sphere_spot.png (PNG copy)> <./sphere_quad.png (PNG copy)>]
+[6 <./dragon_stippling.png (PNG copy)> <./bunny_stippling.png (PNG copy)>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 724.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2 <./prism0.png (PNG copy)> <./prism77.png (PNG copy)> <./pink_diamond.png (P
-NG copy)> <./orange_bunny.png (PNG copy)>] [3
-
- <./wineglass_full.png (PNG copy)>] [4 <./sphere_spot.png (PNG copy)> <./sphere
-_quad.png (PNG copy)> <./bunny_stippling.png (PNG copy)>] (./final_report_pwgre
-ene.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+(./final_report_pwgreene.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 724.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 724.
+Package rerunfilecheck Info: File `final_report_pwgreene.out' has not changed.
+(rerunfilecheck)             Checksum: 0E2FD4388EE18E80992E8E80C61D86FE;284.
  ) 
 Here is how much of TeX's memory you used:
- 4641 strings out of 493089
- 72772 string characters out of 6134842
- 148209 words of memory out of 5000000
- 8071 multiletter control sequences out of 15000+600000
- 37425 words of font info for 72 fonts, out of 8000000 for 9000
+ 8146 strings out of 493089
+ 126081 string characters out of 6134842
+ 226684 words of memory out of 5000000
+ 11531 multiletter control sequences out of 15000+600000
+ 36910 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,7n,40p,843b,396s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,8n,40p,807b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2
-015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-
-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts
-/type1/urw/times/utmri8a.pfb>
-Output written on final_report_pwgreene.pdf (4 pages, 1170107 bytes).
+exlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/201
+5/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-di
+st/fonts/type1/urw/times/utmri8a.pfb>
+Output written on final_report_pwgreene.pdf (6 pages, 1381924 bytes).
 PDF statistics:
- 42 PDF objects out of 1000 (max. 8388607)
- 23 compressed objects within 1 object stream
- 0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 114 PDF objects out of 1000 (max. 8388607)
+ 91 compressed objects within 1 object stream
+ 27 named destinations out of 1000 (max. 500000)
+ 94 words of extra memory for PDF output out of 10000 (max. 10000000)
 

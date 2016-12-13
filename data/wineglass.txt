@@ -1,6 +1,6 @@
 
 PerspectiveCamera {
-center 12 10 -18
+center 14 10 -16
 direction -1.2 -1 1.8
 up 0 1 0
 angle 30
@@ -9,12 +9,12 @@ angle 30
 Lights {
 numLights 1
 SpotLight {
-position 0 6 -5
-direction 0 -.3 .6
+position 0 6 -8
+direction 0 -.3 .9
 color 1 1 1
 power 75
 falloffAngle 60
-hotspotAngle 28
+hotspotAngle 20
 falloffDegree 10
 }
 }

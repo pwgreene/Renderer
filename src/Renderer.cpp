@@ -63,7 +63,8 @@ Renderer::Render()
 
         Vector3f color;
         Camera* cam = _scene.getCamera();
-        //cam->rotateY(i);
+        if (_args.num_views > 1)
+            cam->rotateY(2*3.141592654/_args.num_views*i);
         Vector3f gatherSpot;
         int nGatherPhotons = 1200;
         float maxDistanceCaustic = .15;
@@ -116,8 +117,11 @@ Renderer::Render()
 
         // save the files 
         if (_args.output_file.size()) {
-            if (i > 0)
-                image.savePNG(_args.output_file.append(std::to_string(i)));
+            if (i > 0) {
+                std::string filename = _args.output_file;
+                filename.append(std::to_string(i));
+                image.savePNG(filename);
+            }
             else
                 image.savePNG(_args.output_file);
             printf(std::string("outputted image ").append(std::to_string(i)).append("\n").c_str());
@@ -138,7 +142,8 @@ Renderer::mapPhotons(int nPhotons)
     //TODO fill this in
     //monte carlo photon tracing for a nPhotons (100,000?) originating from the light source(s)
     int nDirectPhotonsMapped = 0, nCausticPhotonsMapped = 0, nIndirectPhotonsMapped = 0;
-    while (nCausticPhotonsMapped < _args.nCausticWanted ){//|| nIndirectPhotonsMapped < _args.nIndirectWanted) {
+    bool limitReached = false;
+    while (!limitReached) {//(nCausticPhotonsMapped < _args.nCausticWanted ){//|| nIndirectPhotonsMapped < _args.nIndirectWanted) {
         //printf("%d\n", nCausticPhotonsMapped);
         for (Light *light : _scene.lights) {
         //printf("%d\n", nPhotons);
@@ -166,6 +171,10 @@ Renderer::mapPhotons(int nPhotons)
                     break;
             }
         }
+        if (_args.stippling)
+            limitReached = shadowMap->size >= _args.stippling;
+        else
+            limitReached = nCausticPhotonsMapped >= _args.nCausticWanted;
     }
     printf("Photons Mapped: %d, %d, %d\n", nDirectPhotonsMapped, nIndirectPhotonsMapped, nCausticPhotonsMapped);
 }
@@ -179,17 +188,19 @@ Renderer::sendPhoton(Ray r, struct Photon &p) {
     int numShadows;
     float t;
     if (_scene.getGroup()->intersect(r, epsilon, h)) {
-        //add to shadow map
-//        shadowHit = Hit();
-//        t = h.getT()+epsilon;
-//        while (_scene.getGroup()->intersect(r, t, shadowHit)) {
-//            Photon shadowPhoton;
-//            shadowPhoton.color = Vector3f(-.2, -.2, -.2);
-//            shadowPhoton.position = r.pointAtParameter(shadowHit.getT());
-//            shadowMap->add(shadowPhoton);
-//            t = shadowHit.getT()+epsilon;
-//            shadowHit = Hit();
-//        }
+//        add to shadow map
+        if (_args.stippling) {
+            shadowHit = Hit();
+            t = h.getT()+epsilon;
+            while (_scene.getGroup()->intersect(r, t, shadowHit)) {
+                Photon shadowPhoton;
+                shadowPhoton.color = Vector3f(-.2, -.2, -.2);
+                shadowPhoton.position = r.pointAtParameter(shadowHit.getT());
+                shadowMap->add(shadowPhoton);
+                t = shadowHit.getT()+epsilon;
+                shadowHit = Hit();
+            }
+        }
         PhotonMaterial *m = h.getPhotonMaterial();
         float randVal = (float)rand()/(float)RAND_MAX;
         if (randVal < m->getPAbsorption()) {
@@ -418,9 +429,9 @@ Renderer::traceRay(Ray &r,
                     Ray rayToLight = Ray(r.pointAtParameter(h.getT()), toLight);
                     shadowHit = Hit();
                     bool hitObj = _scene.getGroup()->intersect(rayToLight, epsilon, shadowHit);
-                    if (!(hitObj) || shadowHit.getT() > distToLight) {
+                    if (!(hitObj) || shadowHit.getT() > distToLight)
                         color += h.getMaterial()->shade(r, h, toLight, intensity);
-                    }
+                
                 } else {
                     color += h.getMaterial()->shade(r, h, toLight, intensity);
                 }
