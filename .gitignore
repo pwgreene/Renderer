@@ -1,4 +1,4 @@
 build/renders/*
 
 final_report/*
-final_report/!.pdf
+!final_report/*.pdf
